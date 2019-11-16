@@ -22,7 +22,6 @@ export default function (state = initialState, action) {
                 leads: [...state.leads, action.payload]
             };
         default:
-            console.log("Unimplemented action type sent", action.type)
             return state
     }
 }
