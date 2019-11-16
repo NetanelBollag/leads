@@ -1,4 +1,4 @@
-import { GET_LEADS } from "../actions/types"
+import { GET_LEADS, DELETE_LEAD } from "../actions/types"
 
 const initialState = {
     leads: []
@@ -10,7 +10,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 leads: action.payload
-            }
+            };
+        case DELETE_LEAD:
+            return {
+                ...state,
+                leads: state.leads.filter(lead => lead.id !== action.payload)
+            };
         default:
             console.log("Unimplemented action type sent", action.type)
             return state
