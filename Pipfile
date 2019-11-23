@@ -10,7 +10,6 @@ pylint = "*"
 django = "*"
 djangorestframework = "*"
 django-rest-knox = "*"
-djangorestframwork = "*"
 
 [requires]
 python_version = "3.7"
